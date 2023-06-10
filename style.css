@@ -1,58 +1,101 @@
-body,html{
-    background-image: url(https://source.unsplash.com/1600x900/?nature);
-    background-size: cover;
-    height: 100vh;
-    display: grid;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-#rec{
-    margin: auto;
-    color:black;
-    font-size: 50px;
-    font-family: Amiri,serif;
-    background:rgba(255,255,255,0.7);
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    text-align: center;
+body,
+html {
+  background-image: url(https://source.unsplash.com/1600x900/?nature) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+  background-color: #efefef;
 }
-#aya{
-    display: inline;
+#rec {
+  margin: auto;
+  color: black;
+  font-size: 50px;
+  font-family: Amiri, serif;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 0.25rem;
+  position: relative;
+  text-align: center;
 }
-#ayanumber{
-    display: inline;
-    font-family: Hafs,serif;
+#aya {
+  display: inline;
 }
-#surah{
-    position:absolute;
-    bottom: -35px; 
-    left: 10px;
-    font-size: large;
-    font-family: Hafs,serif;
-    background:rgba(255,255,255,0.7);
-    padding: 10px;
-    border-radius: 5px;
+#ayanumber {
+  display: inline;
+  font-family: Hafs, serif;
 }
-#buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 20px;
+#surah {
+  position: absolute;
+  bottom: -35px;
+  left: 10px;
+  font-size: large;
+  font-family: Hafs, serif;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
 }
-.button{
-    width: 20%;
-    height:60px;
-    min-width:fit-content;
-    background:rgba(255,255,255,0.7);
-    border-radius: 10px;
-    font-size:20px;
-    font-family: Amiri,serif;
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.button {
+  flex-grow: 1;
+  width: 10%;
+  height: 60px;
+  min-width: fit-content;
+  background-color: transparent;
+  font-size: 20px;
+  font-family: Amiri, serif;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 10px;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
 
+.button:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: gray;
+  transform: translateY(-1px);
+  background-color: #fff;
+}
+
+.button:active {
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
 }
 @font-face {
-    font-family: Amiri;
-    src: url(AmiriQuran-Regular.ttf);
-  }
+  font-family: Amiri;
+  src: url(AmiriQuran-Regular.ttf);
+}
 @font-face {
-    font-family: Hafs;
-    src: url(hafs.otf);
-  }
+  font-family: Hafs;
+  src: url(hafs.otf);
+}
